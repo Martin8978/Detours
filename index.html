@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Detour Game</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1280px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/Detours Web.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Detours Web.data.gz",
+        frameworkUrl: "Build/Detours Web.framework.js.gz",
+        codeUrl: "Build/Detours Web.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Shaddy Coner",
+        productName: "Detour Game",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
